@@ -2,44 +2,11 @@ import express from "express";
 
 const router = express.Router();
 
-const rooms = [
-];
+const rooms = []
 
-const customerBookedRooms = [
-  {
-    customerName: "John Doe",
-    bookingDate: "September 23, 2021",
-    startTime: "12:30:00",
-    endTime: "1:30:00",
-    roomId: 0,
-  },
-  {
-    customerName: "Jane Doe",
-    bookingDate: "September 25, 2021",
-    startTime: "19:00:00",
-    endTime: "20:30:00",
-    roomId: 1,
-  },
-];
+const customerBookedRooms = []
 
-const bookedRooms = [
-  {
-    customerName: "John Doe",
-    bookingDate: "September 23, 2021",
-    startTime: "12:30:00",
-    endTime: "1:30:00",
-    booked: true,
-    roomId: 0
-  },
-  {
-    customerName: "Jane Doe",
-    bookingDate: "September 25, 2021",
-    startTime: "19:00:00",
-    endTime: "20:30:00",
-    booked: true,
-    roomId: 1
-  },
-];
+const bookedRooms = []
 
 // all routes in here are starting with /rooms
 // Getting all the available rooms
