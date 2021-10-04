@@ -3,18 +3,6 @@ import express from "express";
 const router = express.Router();
 
 const rooms = [
-  {
-    id: 0,
-    numberOfSeats: 30,
-    amenities: ["Television", "Air Conditioner", "Water Purifier"],
-    pricePerHour: "$20",
-  },
-  {
-    id: 1,
-    numberOfSeats: 20,
-    amenities: ["Air Conditioner"],
-    pricePerHour: "$20",
-  },
 ];
 
 const customerBookedRooms = [
