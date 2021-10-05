@@ -2,11 +2,11 @@ import express from "express";
 
 const router = express.Router();
 
-const rooms = []
+const rooms = [];
 
-const customerBookedRooms = []
+const customerBookedRooms = [];
 
-const bookedRooms = []
+const bookedRooms = [];
 
 // all routes in here are starting with /rooms
 // Getting all the available rooms
@@ -34,8 +34,9 @@ router.post("/book-room", (req, res) => {
 
   for (let i = 0; i < customerBookedRooms.length; i++) {
     if (
-      req.body.bookingDate !== customerBookedRooms[i].bookingDate &&
-      req.body.startTime !== customerBookedRooms[i].startTime
+      (req.body.bookingDate !== customerBookedRooms[i].bookingDate &&
+        req.body.startTime !== customerBookedRooms[i].startTime) ||
+      customerBookedRooms.length === 0
     ) {
       customerBookedRooms.push(room);
       res.json({
